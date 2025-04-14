@@ -1,0 +1,24 @@
+<table id="playerInfo">
+    <thead>
+    <tr>
+        <th>Rank</th>
+        <th>Player</th>
+        <th>Age</th>
+        <th>WAR</th>
+        <th>HR</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% let i = 1; %>
+    <% data.forEach((dt)  => { %>
+        <tr>
+        <td><%= i %></td>
+        <% i++; %>
+        <td><%= dt.Player %></td>
+        <td><%= dt.Age %></td>
+        <td><%= dt.WAR %></td>
+        <td><%= dt.HR %></td>
+        </tr>
+    <% }); %>
+    </tbody>
+</table>

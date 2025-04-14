@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="/javascripts/ajax.js"></script> 
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <form id="searchForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" value=<%=searchQuery.name%> >
+      <label for="age">Age:</label>
+      <input type="text" id="age" name="age" value=<%=searchQuery.age%> >
+      <select name="age_val" id="age_val">
+        <option value="eq"
+        <% if (searchQuery.age_val == "eq") { %>
+          selected
+        <%} %>
+        >=</option>
+        <option value="gt"
+        <% if (searchQuery.age_val == "gt") { %>
+          selected
+        <%} %>
+        >></option>
+        <option value="lt"
+        <% if (searchQuery.age_val == "lt") { %>
+          selected
+        <%} %>
+        ><</option>
+      </select> 
+      <label for="war">WAR:</label>
+      <input type="text" id="war" name="war" value=<%=searchQuery.war%> >
+      <select name="war_val" id="war_val">
+        <option value="eq"
+        <% if (searchQuery.war_val == "eq") { %>
+          selected
+        <%} %>
+        >=</option>
+        <option value="gt"
+        <% if (searchQuery.war_val == "gt") { %>
+          selected
+        <%} %>
+        >></option>
+        <option value="lt"
+        <% if (searchQuery.war_val == "lt") { %>
+          selected
+        <%} %>
+        ><</option>
+      </select> 
+      <label for="hr">HR:</label>
+      <input type="text" id="hr" name="hr" value=<%=searchQuery.hr%> >
+      <select name="hr_val" id="hr_val">
+        <option value="eq"
+        <% if (searchQuery.hr_val == "eq") { %>
+          selected
+        <%} %>
+        >=</option>
+        <option value="gt"
+        <% if (searchQuery.hr_val == "gt") { %>
+          selected
+        <%} %>
+        >></option>
+        <option value="lt"
+        <% if (searchQuery.hr_val == "lt") { %>
+          selected
+        <%} %>
+        ><</option>
+      </select> 
+      <input id="searchBtn" type="submit" value="Search">
+    </form>
+    <div id="playerInfo">
+
+    </div>
+  </body>
+</html>
