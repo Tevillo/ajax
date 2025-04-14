@@ -3,14 +3,9 @@ window.onload = function() {
     var playerInfo = document.getElementById("playerInfo");
     var searchButton = document.getElementById("searchBtn");
 
-searchButton.addEventListener("mouseover", function() {
-    console.log("search button hovered"); 
-    searchButton.style.cursor = "pointer";
-});
 
 searchButton.addEventListener("click", function() {
     event.preventDefault();
-    console.log("search button clicked"); 
     let xhr = new XMLHttpRequest();
     xhr.addEventListener("load", responseReceivedHandler);
 
